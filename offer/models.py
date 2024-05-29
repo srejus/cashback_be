@@ -14,6 +14,7 @@ class Coupon(models.Model):
     desc = models.TextField(null=True,blank=True)
     order_number = models.IntegerField(null=True,blank=True)
     discount_type = models.CharField(max_length=10,default=PERCENT,choices=DIS_TYPE_CHOICES)
+    offer_value = models.FloatField(default=10.0)
     min_value = models.FloatField(default=0.0)
     max_value = models.FloatField(default=5000.0)
     total_used = models.IntegerField(default=0)
